@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The FlintStones AI Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='Easy_CSS.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="{{ url_for('static', path='logo.jpg') }}"alt="Logo"style="width: 40px; height: 40px;">
+                <span>The FlintStones</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="diagonal-grid"></div>
+        <div class="static-decoration"></div>
+        <div class="bottom-right-decoration"></div>
+        <div class="hero-content">
+            <h1>Try Our AI Model</h1>
+            <p>
+                <span class="text-option">YOLOv11 object detection model</span>
+                <span class="text-option">No wasting hours on artifact classification</span>
+                <span class="text-option">More than %95 percent accuracy</span>
+            </p>            
+            <form action="/detect" method="post" enctype="multipart/form-data">
+                <input 
+                    type="file" 
+                    name="file" 
+                    id="fileInput" 
+                    accept="image/*" 
+                    required 
+                    hidden
+                    onchange="this.form.submit()"
+                >
+                <label for="fileInput" class="cta-btn" style="cursor: pointer;">
+                    Try Our AI Model Now
+                </label>
+
+            </form>
+
+        </div>
+    </section>
+<!--
+    <section id="AI">
+        <h2>Our Signature Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&h=200&fit=crop&crop=center" alt="Truffle Risotto" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Truffle Risotto</h3>
+                    <p>Creamy arborio rice with black truffle, parmesan, and fresh herbs</p>
+                    <div class="price">$32</div>
+                    <button class="ingredients-btn" onclick="showIngredients('truffle-risotto')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=200&fit=crop&crop=center" alt="Grilled Salmon" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Grilled Salmon</h3>
+                    <p>Atlantic salmon with lemon butter sauce and seasonal vegetables</p>
+                    <div class="price">$28</div>
+                    <button class="ingredients-btn" onclick="showIngredients('grilled-salmon')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=200&fit=crop&crop=center" alt="Beef Wellington" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Beef Wellington</h3>
+                    <p>Premium beef tenderloin wrapped in puff pastry with mushroom duxelles</p>
+                    <div class="price">$45</div>
+                    <button class="ingredients-btn" onclick="showIngredients('beef-wellington')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=400&h=200&fit=crop&crop=center" alt="Lobster Thermidor" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Lobster Thermidor</h3>
+                    <p>Fresh lobster in cognac cream sauce with gruyere cheese</p>
+                    <div class="price">$52</div>
+                    <button class="ingredients-btn" onclick="showIngredients('lobster-thermidor')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=200&fit=crop&crop=center" alt="Duck Confit" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Duck Confit</h3>
+                    <p>Slow-cooked duck leg with garlic potatoes and cherry reduction</p>
+                    <div class="price">$38</div>
+                    <button class="ingredients-btn" onclick="showIngredients('duck-confit')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=200&fit=crop&crop=center" alt="Chocolate Soufflé" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Chocolate Soufflé</h3>
+                    <p>Warm chocolate soufflé with vanilla ice cream and berry coulis</p>
+                    <div class="price">$16</div>
+                    <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+</body>
+</html>

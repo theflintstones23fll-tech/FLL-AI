@@ -35,14 +35,14 @@ def print_results(results):
 
 
 app = FastAPI()
-model = YOLO("FLL-AI.pt")
-app.mount("/static", StaticFiles(directory="C:\\Users\\mecha\\FLL-AI\\src\\static"), name="static")
-templates = Jinja2Templates(directory="C:\\Users\\mecha\\FLL-AI\\src\\templates")
+model = YOLO("app/FLL-AI.pt")
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse,)
 def home(request: Request):
     return templates.TemplateResponse(
-        "Response_HTML.html", {"request": request}
+        "index.html", {"request": request}
     )
     return """
     <h2>FLL AI</h2>
